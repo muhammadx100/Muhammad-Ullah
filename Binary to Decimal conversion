@@ -1,0 +1,20 @@
+import java.util.Scanner;
+class ABZ{
+  public static void main(String args[]){
+   Scanner in= new Scanner(System.in);
+  System.out.print("Enter Any binary number: ");
+    int binary=in.nextInt(), ans=0, power=1, rem=0;
+
+    while (binary>0) {
+      rem=binary%10;
+      binary=binary/10;
+      ans+=rem*power;
+      power*=2;
+    }
+
+    System.out.println(ans);
+
+  
+  }
+}
+   
