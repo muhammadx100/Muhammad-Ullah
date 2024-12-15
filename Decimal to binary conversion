@@ -1,0 +1,17 @@
+import java.util.Scanner;
+class Random_Number_detector{
+    public static void main(String args[]){
+        Scanner in=new Scanner(System.in);
+    
+        int decimal=20, power=1, ans=0, rem=0;
+        while(decimal>0){
+          rem=decimal%2;
+          decimal=decimal/2;
+          ans=ans+(rem*power);
+          power= power*10;
+        }
+        System.out.println(ans);
+
+      }
+    
+    }
