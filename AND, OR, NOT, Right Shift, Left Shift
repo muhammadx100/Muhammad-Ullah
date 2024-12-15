@@ -1,0 +1,26 @@
+import java.util.Scanner;
+class ABZ{
+  public static void main(String args[]){
+   Scanner in= new Scanner(System.in);
+   int a=20, b=2;
+
+   // AND operation
+
+   System.out.println((a&b));
+
+    // OR operation
+   System.out.println((a|b));
+
+    // NOR operation
+   System.out.println((a^b));
+
+   //right shift >>
+   System.out.println(a>>b);
+
+   //left shift <<
+   System.out.println(a<<b);
+   
+  
+  }
+}
+   
