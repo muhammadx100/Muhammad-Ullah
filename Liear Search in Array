@@ -1,0 +1,22 @@
+import java.util.Scanner;
+class ABZ{
+  public static void main(String args[]){
+   Scanner in= new Scanner(System.in);
+   int [] array={1, 8, 55, 45, 2};
+   int target=0;
+   int size=5;
+   int x=func(array, size, target);
+   System.out.println(x);
+
+   }
+   public static int  func(int [] array, int size, int target){
+    for(int i=0; i<size; i++){
+      if(array[i]==target){
+        return i;
+      }
+
+    }
+    return -1;
+
+   }
+} 
