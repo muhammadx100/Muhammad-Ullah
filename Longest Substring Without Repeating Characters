@@ -1,0 +1,18 @@
+import java.util.Set;
+import java.util.LinkedHashSet;
+public class random {
+    public static void main(String args[]){
+      Set<Character> set= new LinkedHashSet<>();
+     String abc="ababab";
+   
+     for(char c: abc.toCharArray()){
+        if(!set.contains(c)){
+         set.add(c);
+        }
+       // System.out.println(c+" ");
+     }
+    System.out.println(set);
+    System.out.println(set.size());
+
+}
+}
