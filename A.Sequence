@@ -1,0 +1,47 @@
+import java.util.Scanner;
+class abc{
+   public static void main(String args[]){
+      Scanner scan=new Scanner(System.in);
+       
+       System.out.println("Note:");
+       System.out.print("\tyou should need to mention the last index of array:");
+       String input=scan.nextLine();
+       String [] dispute=input.split("[, .]");
+       String a1=dispute[0];
+       String a2=dispute[1];
+       String a3=dispute[2];
+       String an=dispute[dispute.length-1];
+       
+       //explicit type casting from string to integer
+       int a11=Integer.parseInt(a1);
+       int a22=Integer.parseInt(a2);
+       int a33=Integer.parseInt(a3);
+       int ann=Integer.parseInt(an);
+       
+       //common difference
+      try{
+       int c_difference=0;
+       if((a22-a11)==(a33-a22)){
+         c_difference=a22-a11;
+         System.out.println("Common Difference: "+c_difference);
+       }
+       else{
+        throw new IllegalAccessError("Not Arethematic sequence: ");
+        
+       }
+       //nterm
+       int n_term=(ann-a11+c_difference)/c_difference;
+       System.out.println("n term is : "+n_term);
+       int item=(n_term*(a11+ann))/2;
+       System.out.println("Sum of Arithmatic sequence is: "+item);
+      }
+      catch(IllegalArgumentException e){
+             
+      }
+   }
+}
+
+
+
+
+
