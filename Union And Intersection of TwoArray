@@ -1,0 +1,46 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+class abc{
+   public static void main(String args[]){
+      Scanner scan=new Scanner(System.in);
+      int [] array={1,2,3,4,5};
+      int [] second={4,5,7,1,2};
+      // intersection of twoArray
+      ArrayList<Integer> intersection= new ArrayList<>();
+      for(int c: array){
+        for(int x: second){
+         if(c==x){
+            intersection.add(c);
+         }
+        }
+    
+      }
+      for(int x: intersection){
+         System.out.print(x+" ");
+      }
+System.out.println();
+      // Union of TwoArray
+      ArrayList<Integer> Union= new ArrayList<>();
+
+      for(int C: array){   
+            for(int X: second){   
+               if(C!=X){
+                  if((!Union.contains(C)) &&(!Union.contains(X))){
+                     Union.add(C);
+                     Union.add(X);
+                  }
+                 
+                 
+               }
+
+         }
+      }
+    
+      for(int Y: Union){
+         System.out.print(Y+" ");
+      }
+
+    
+      }
+     
+   }
