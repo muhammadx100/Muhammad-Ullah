@@ -1,0 +1,19 @@
+import java.util.Stack;
+import java.util.Scanner;
+class abc{
+   public static void main(String args[]){
+      Scanner scan=new Scanner(System.in);
+   // NOTE
+        // for using pop and push concept we should need to import Stack library 
+        // like import java.util.Stack;
+
+        Stack<Integer> stac= new Stack<>();
+        stac.push(1);
+        stac.push(2);
+        stac.push(3);
+        System.out.println(stac);
+        stac.remove(1);  // remove from specific index
+        System.out.println(stac);
+
+   } 
+   }
