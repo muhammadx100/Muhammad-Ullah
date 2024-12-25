@@ -1,0 +1,28 @@
+import java.util.Arrays;
+class Solution {
+    public static void main(String args[]){
+       int [] Firstarray={3,5,1,4,2};
+       int [] Secondarray={110, 11, 9, 7};
+       int [] newarray=new int[Firstarray.length+ Secondarray.length];
+       for(int i=0; i<Firstarray.length; i++){
+        newarray[i]=Firstarray[i];
+       }
+       for(int i=0; i<Secondarray.length; i++){
+        newarray[Firstarray.length+i]=Secondarray[i];
+       }
+       for(int i=0; i<newarray.length-1; i++){
+        for(int j=0; j<newarray.length-1; j++){
+            if(newarray[j]>newarray[j+1]){
+                int temp=newarray[j];
+                newarray[j]=newarray[j+1];
+                newarray[j+1]=temp;
+            }
+        }
+       }
+
+       for(int c: newarray){
+        System.out.print(c+" ");
+       }
+
+      }
+       }
