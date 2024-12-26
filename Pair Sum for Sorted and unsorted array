@@ -1,0 +1,79 @@
+import java.util.ArrayList;
+import java.util.List;
+class Sorted {
+    public static void main (String args[] ) {
+
+        List<Integer> answer=new ArrayList<>();
+
+                 int [] array={1,2,3,10,5};
+
+                 /*    Use Two pointer approach 
+                       if Array is sorted          */
+
+                int target_Value=5;
+                int size=array.length;
+
+                int i=0; //Starting point/ or first pointer
+                int j=size-1;  // last value of array/ second pointer
+
+                while(i<j){
+
+                   int pointer_Sum=array[i]+array[j];   // sum of both pointer
+                   if(pointer_Sum>target_Value){
+                    j--;
+                   }
+                   else if(pointer_Sum<target_Value){
+                    i++;
+
+                   }
+                   else{
+                    answer.add(i);
+                    answer.add(j);
+                    i++;
+                    j--;
+
+                   }
+
+                }
+
+                 for(int c: answer){
+                    System.out.print(c+" ");
+                 }
+                
+
+                
+               
+
+                
+            }  
+        }
+ class unsorted{
+    public static void main (String args[] ) {
+
+         /* for unsorted array */
+        int [] array={1,2,3,10,5};
+
+       int target_Value=3;
+       int size=array.length;
+
+
+
+        List<Integer> answer2=new ArrayList<>();
+
+        for(int i=0; i<size; i++){
+           for(int j=i+1; j<size; j++){
+               if(array[i]+array[j]==target_Value){
+              answer2.add(i);
+              answer2.add(j);
+               }
+           }
+
+        }
+        for(int q: answer2){
+           System.out.print(q+" ");
+        }
+       
+
+
+    }
+ }
