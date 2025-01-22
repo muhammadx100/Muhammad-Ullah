@@ -1,0 +1,36 @@
+import java.util.List;
+import java.util.LinkedList;
+class abc{
+    public static void main(String args[]){
+
+        List<Integer> list=new LinkedList<>();
+        List<List<Integer>> majorlist=new LinkedList<>();
+
+       int [] array={1,2};
+
+  List<List<Integer>> output=function(majorlist, list, array, 0);
+//   System.out.println(output);
+
+
+       }
+ public static List<List<Integer>> function(List<List<Integer>> majorlist, 
+ List<Integer> list, int [] array, int i ){
+    if(i==array.length){
+        System.out.println(list);
+    }
+    else{
+        list.add(array[i]);
+
+        function(majorlist, list, array, i+1);
+
+        list.remove(list.size()-1);
+
+        function(majorlist, list, array, i+1);
+        
+    }
+        
+
+        return majorlist;
+     }
+
+}
